@@ -105,6 +105,13 @@ class UserDao {
         return $value;
     }
 
+    public static function saveOrUpdate($user){
+        if (!empty($user->getId())) {
+            self::update($user);
+        } else {
+            self::create($user);
+        }
+    }
     public static function findAll() {
         
     }

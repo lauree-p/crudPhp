@@ -17,8 +17,8 @@
             <div class="row">
                 <h3>Delete a user</h3>
             </div>
-            <form class="form-horizontal" action="delete.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $id;?>" />
+            <form class="form-horizontal" action="index.php?action=delete&id=<?= $user->getId() ?>" method="post">
+                <input type="hidden" name="id" value="<?= $user->getId() ?>" />
                 Are you sure to delete ?
                 <div class="form-actions">
                     <button type="submit" class="btn btn-danger">Yes</button>
